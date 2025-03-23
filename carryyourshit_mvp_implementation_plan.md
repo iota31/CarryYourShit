@@ -166,14 +166,38 @@ CarryYourShit is a luggage and travel accessories e-commerce store built on the 
   - Verify webhook functionality
 
 ### 4.6 Shipping Methods
-- [ ] Configure shipping methods:
+- [x] Configure built-in shipping methods in Bagisto:
   - Admin Panel → Configuration → Sales → Shipping Methods
-  - Configure flat rate shipping for different regions in India
-    - Set appropriate rates for Metro cities, Tier 2 cities, and other regions
-    - Configure weight-based pricing for heavier luggage items
-  - Enable free shipping for orders above a certain value (e.g., ₹5000)
-  - Set up shipping method display order
-  - Configure appropriate shipping descriptions for customer clarity
+  - **Flat Rate Shipping**:
+    - Enable and set different rates for different regions in India
+    - Configure as "per order" for small items and "per unit" for larger luggage
+    - Set up tiered pricing based on order weight
+  - **Free Shipping**:
+    - Enable for orders above ₹5000
+    - Clear messaging for customers about free shipping threshold
+
+- [x] Set up shipping origin information:
+  - Admin Panel → Configuration → Sales → Shipping Settings → Origin
+  - Configure warehouse/business address for shipping calculations
+
+- [x] Shiprocket Integration:
+  - [x] Install Shiprocket API package: `composer require seshac/laravel-shiprocket-api`
+  - [x] Create custom Shiprocket shipping module for Bagisto
+  - [x] Configure region-based and weight-based pricing
+  - [x] Set up automatic order creation in Shiprocket when shipments are created
+  - [x] Enable shipment tracking, label generation, and cancellation
+  - Benefits of Shiprocket:
+    - Aggregates 17+ courier services
+    - Offers competitive rates
+    - Pan-India coverage (29,000+ pin codes)
+    - International shipping to 220+ countries
+    - COD support
+    - Real-time tracking
+
+- [x] Test shipping calculation in checkout:
+  - Verify shipping costs for different regions
+  - Test free shipping threshold
+  - Check weight-based price calculations
 
 ## 5. Frontend Customization & API Integration
 
@@ -335,9 +359,11 @@ CarryYourShit is a luggage and travel accessories e-commerce store built on the 
   - [x] Configure service provider
   - [x] Set up CSRF exceptions
   - [ ] Complete Razorpay credentials setup in admin panel
-- [ ] Configure shipping methods
-  - [ ] Set up flat rate shipping for different regions in India
-  - [ ] Enable free shipping for orders above threshold
-  - [ ] Test shipping calculations in checkout
+- [x] Configure shipping methods
+  - [x] Set up Flat Rate shipping with region-specific pricing
+  - [x] Configure Free shipping for orders above ₹5000
+  - [x] Set up shipping origin information
+  - [x] Implement Shiprocket integration
+  - [x] Test shipping calculations in checkout
 - [ ] Test user flows and functionality
 - [ ] Customize frontend as needed 

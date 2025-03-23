@@ -109,6 +109,26 @@ To configure Razorpay:
    - Enter your API key ID and Secret
    - Set up webhook for payment notifications
 
+## Shipping Configuration
+
+CarryYourShit offers flexible shipping options for customers across India:
+
+1. **Flat Rate Shipping**: 
+   - Region-specific rates based on delivery location
+   - Different rates for Metro cities, Tier 2 cities, and other regions
+   - Weight-based pricing for heavier luggage items
+
+2. **Free Shipping**:
+   - Available for orders above ₹5000
+   - Encourages larger purchases
+
+3. **Future Integration with Shiprocket** (Phase 2):
+   - Will integrate with Shiprocket for more delivery options
+   - Will support Cash on Delivery (COD)
+   - Real-time tracking and multiple courier options
+
+For detailed configuration steps, refer to the [Shipping Configuration Guide](shipping-configuration-guide.md).
+
 ## Features
 
 - **Multi-Language & Multi-Currency**: Supports multiple languages and currencies
